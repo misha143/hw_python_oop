@@ -30,7 +30,6 @@ class Calculator:
 
 
 class CashCalculator(Calculator):
-
     EURO_RATE = 70.0
     USD_RATE = 60.0
     RUB_RATE = 1
@@ -45,8 +44,8 @@ class CashCalculator(Calculator):
         course, rate = self.dict_rate[current]
         remainder = abs(today_spent / course)
         if today_spent > 0:
-            return f'На сегодня осталось {round(remainder,2)} {rate}'
-        return f'Денег нет, держись: твой долг - {round(remainder,2)} {rate}'
+            return f'На сегодня осталось {round(remainder, 2)} {rate}'
+        return f'Денег нет, держись: твой долг - {round(remainder, 2)} {rate}'
 
 
 class CaloriesCalculator(Calculator):
